@@ -303,10 +303,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
-    
-# Lets Load ART by default because hammerhead runs it well and were on AOSP
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.dalvik.vm.lib=libart.so    
 
 # Request modem to send PLMN name always irrespective
 # of display condition in EFSPN.
