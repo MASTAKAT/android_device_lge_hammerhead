@@ -99,13 +99,36 @@ BOARD_SEPOLICY_DIRS += \
 
 # The list below is order dependent
 BOARD_SEPOLICY_UNION += \
-       file.te \
-       device.te \
        app.te \
+       bluetooth_loader.te \
+       bridge.te \
+       camera.te \
+       device.te \
+       file.te \
+       mediaserver.te \
+       mpdecision.te \
+       netmgrd.te \
+       qmux.te \
+       rild.te \
        rmt.te \
+       sensors.te \
+       ssr.te \
+       surfaceflinger.te \
+       system_server.te \
+       tee.te \
+       thermald.te \
+       time.te \
        ueventd.te \
-       file_contexts
+       vss.te \
+       file_contexts \
+       genfs_contexts \
+       te_macros
 
 HAVE_ADRENO_SOURCE:= false
 
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+
+TARGET_TOUCHBOOST_FREQUENCY:= 2200
+
+-include vendor/lge/hammerhead/BoardConfigVendor.mk
